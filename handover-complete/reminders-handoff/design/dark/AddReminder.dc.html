@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>New reminder — dark</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7E9CF8}a:hover{color:#A9BCFA}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #0F1115; font-family: 'Plus Jakarta Sans', sans-serif; color: #ECEEF2; display: flex; flex-direction: column; overflow: hidden">
+
+  <div style="padding: 20px 12px 8px; display: flex; align-items: center; gap: 4px">
+    <a href="Home.dc.html" aria-label="Close" style="width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ECEEF2" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></a>
+    <h1 style="margin: 0; font-size: 20px; font-weight: 800; flex: 1">New reminder</h1>
+  </div>
+
+  <div style="flex: 1; padding: 0 20px; display: flex; flex-direction: column; gap: 12px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="dtitle" style="font-size: 13px; font-weight: 700; color: #9AA0AE">Title</label>
+      <input id="dtitle" value="Mom's birthday" style="height: 52px; border-radius: 14px; border: 1.5px solid #ECEEF2; background: #1A1D24; padding: 0 16px; font-family: inherit; font-size: 16px; font-weight: 600; color: #ECEEF2; box-sizing: border-box">
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 13px; font-weight: 700; color: #9AA0AE">Type</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: none; background: #3A2418; color: #F28A52; font-family: inherit; font-weight: 700; font-size: 13px">Birthday</button>
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #343944; background: #1A1D24; color: #ECEEF2; font-family: inherit; font-weight: 600; font-size: 13px">Anniversary</button>
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #343944; background: #1A1D24; color: #ECEEF2; font-family: inherit; font-weight: 600; font-size: 13px">Bill</button>
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #343944; background: #1A1D24; color: #ECEEF2; font-family: inherit; font-weight: 600; font-size: 13px">Other</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 13px; font-weight: 700; color: #9AA0AE">Repeats</div>
+      <div role="group" aria-label="Repeats" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); background: #2A2E37; border-radius: 14px; padding: 4px; gap: 2px">
+        <button style="height: 40px; border: none; border-radius: 10px; background: transparent; color: #A9AFBC; font-family: inherit; font-size: 12px; font-weight: 600">Once</button>
+        <button style="height: 40px; border: none; border-radius: 10px; background: transparent; color: #A9AFBC; font-family: inherit; font-size: 12px; font-weight: 600">Daily</button>
+        <button style="height: 40px; border: none; border-radius: 10px; background: transparent; color: #A9AFBC; font-family: inherit; font-size: 12px; font-weight: 600">Weekly</button>
+        <button style="height: 40px; border: none; border-radius: 10px; background: transparent; color: #A9AFBC; font-family: inherit; font-size: 12px; font-weight: 600">Monthly</button>
+        <button aria-pressed="true" style="height: 40px; border: none; border-radius: 10px; background: #3A3F4B; color: #ECEEF2; font-family: inherit; font-size: 12px; font-weight: 800">Yearly</button>
+      </div>
+      <div style="font-size: 13px; color: #9AA0AE">Every year on 24 October.</div>
+    </div>
+
+    <div style="background: #1A1D24; border-radius: 18px; display: flex; flex-direction: column">
+      <button style="height: 56px; border: none; background: transparent; padding: 0 16px; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #ECEEF2; text-align: left">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+        <span style="flex: 1; font-size: 15px; font-weight: 600">Date</span><span style="font-size: 15px; font-weight: 700">24 Oct</span>
+      </button>
+      <div style="height: 1px; background: #2A2E37; margin: 0 16px"></div>
+      <button style="height: 56px; border: none; background: transparent; padding: 0 16px; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #ECEEF2; text-align: left">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        <span style="flex: 1; font-size: 15px; font-weight: 600">Time</span><span style="font-size: 15px; font-weight: 700">9:00 AM</span>
+      </button>
+      <div style="height: 1px; background: #2A2E37; margin: 0 16px"></div>
+      <button style="height: 56px; border: none; background: transparent; padding: 0 16px; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #ECEEF2; text-align: left">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path><path d="M4 16s1.5-1 4-1 4 2 6 2 4-1 4-1"></path><path d="M2 21h20"></path><path d="M12 8V5"></path></svg>
+        <span style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Birth year</span><span style="font-size: 12px; color: #9AA0AE">Optional · shows live age</span></span>
+        <span style="font-size: 15px; font-weight: 700">1968</span>
+      </button>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 13px; font-weight: 700; color: #9AA0AE">Remind me</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <button aria-pressed="true" style="height: 36px; padding: 0 14px; border-radius: 18px; border: none; background: #ECEEF2; color: #0F1115; font-family: inherit; font-weight: 700; font-size: 13px">On the day</button>
+        <button aria-pressed="true" style="height: 36px; padding: 0 14px; border-radius: 18px; border: none; background: #ECEEF2; color: #0F1115; font-family: inherit; font-weight: 700; font-size: 13px">1 day before</button>
+        <button aria-pressed="false" style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #343944; background: #1A1D24; color: #ECEEF2; font-family: inherit; font-weight: 600; font-size: 13px">1 week before</button>
+        <button aria-pressed="false" style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #343944; background: #1A1D24; color: #ECEEF2; font-family: inherit; font-weight: 600; font-size: 13px">1 month before</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="dnote" style="font-size: 13px; font-weight: 700; color: #9AA0AE">Note</label>
+      <input id="dnote" placeholder="Gift idea, phone number…" style="height: 52px; border-radius: 14px; border: 1px solid #343944; background: #1A1D24; padding: 0 16px; font-family: inherit; font-size: 15px; color: #ECEEF2; box-sizing: border-box">
+    </div>
+  </div>
+
+  <div style="padding: 12px 20px 20px">
+    <a href="Home.dc.html" style="height: 56px; border-radius: 18px; background: #2F5BEA; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; text-decoration: none">Save reminder</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

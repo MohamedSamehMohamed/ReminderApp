@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calendar — dark</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#7E9CF8}a:hover{color:#A9BCFA}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #0F1115; font-family: 'Plus Jakarta Sans', sans-serif; color: #ECEEF2; display: flex; flex-direction: column; overflow: hidden">
+
+  <div style="padding: 28px 20px 12px; display: flex; justify-content: space-between; align-items: center">
+    <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em">October 2026</h1>
+    <div style="display: flex; gap: 8px">
+      <button aria-label="Previous month" style="width: 44px; height: 44px; border-radius: 22px; border: none; background: #1A1D24; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ECEEF2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+      <button aria-label="Next month" style="width: 44px; height: 44px; border-radius: 22px; border: none; background: #1A1D24; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ECEEF2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+    </div>
+  </div>
+
+  <div style="margin: 4px 20px 0; background: #1A1D24; border-radius: 24px; padding: 16px 12px">
+    <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); text-align: center; font-size: 12px; font-weight: 700; color: #9AA0AE; padding-bottom: 8px">
+      <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); row-gap: 4px">
+      <sc-for list="{{cells}}" as="c" hint-placeholder-count="35">
+        <div aria-label="{{c.label}}" style="{{c.style}}">
+          <span>{{c.day}}</span>
+          <span style="display: flex; gap: 3px; height: 6px"><sc-for list="{{c.dots}}" as="d" hint-placeholder-count="1"><span style="{{d}}"></span></sc-for></span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: flex; gap: 14px; justify-content: center; padding-top: 12px; font-size: 12px; color: #9AA0AE; font-weight: 600">
+      <span style="display: flex; gap: 6px; align-items: center"><span style="width: 8px; height: 8px; border-radius: 4px; background: #F28A52"></span>Yearly</span>
+      <span style="display: flex; gap: 6px; align-items: center"><span style="width: 8px; height: 8px; border-radius: 4px; background: #3CC2AF"></span>Monthly</span>
+      <span style="display: flex; gap: 6px; align-items: center"><span style="width: 8px; height: 8px; border-radius: 4px; background: #7E9CF8"></span>Weekly</span>
+    </div>
+  </div>
+
+  <div style="flex: 1; padding: 18px 20px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="font-size: 13px; font-weight: 700; color: #9AA0AE">Monday, 12 October</div>
+    <a href="Detail.dc.html" style="background: #1A1D24; border-radius: 18px; padding: 14px; display: flex; gap: 12px; align-items: center; text-decoration: none; color: #ECEEF2">
+      <span style="width: 10px; height: 40px; border-radius: 5px; background: #F28A52"></span>
+      <span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Omar's birthday</span><span style="font-size: 13px; color: #9AA0AE">Yearly · turns 30 · all day</span></span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+    </a>
+    <a href="Detail.dc.html" style="background: #1A1D24; border-radius: 18px; padding: 14px; display: flex; gap: 12px; align-items: center; text-decoration: none; color: #ECEEF2">
+      <span style="width: 10px; height: 40px; border-radius: 5px; background: #7A7F8E"></span>
+      <span style="flex: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Take vitamins</span><span style="font-size: 13px; color: #9AA0AE">Daily · 8:00 AM</span></span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+    </a>
+  </div>
+
+  <nav style="height: 76px; background: #1A1D24; border-top: 1px solid #2A2E37; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center">
+    <a href="Home.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #9AA0AE; font-size: 12px; font-weight: 600"><span style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg></span>Home</a>
+    <a href="Calendar.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #ECEEF2; font-size: 12px; font-weight: 700"><span style="width: 56px; height: 30px; border-radius: 15px; background: #24305A; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ECEEF2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span>Calendar</a>
+    <a href="AddReminder.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #9AA0AE; font-size: 12px; font-weight: 600"><span style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></span>All</a>
+    <a href="Settings.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #9AA0AE; font-size: 12px; font-weight: 600"><span style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA0AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg></span>Settings</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var COL = { y: '#F28A52', m: '#3CC2AF', w: '#7E9CF8' };
+    var ev = { 12: ['y'], 15: ['m'], 24: ['y'], 28: ['y'], 2: ['w'], 9: ['w'], 16: ['w'], 23: ['w'], 30: ['w'] };
+    var cells = [];
+    for (var i = 0; i < 35; i++) {
+      var day = i - 3;
+      if (day < 1 || day > 31) { cells.push({ day: '', label: 'Empty', dots: [], style: 'height: 46px' }); continue; }
+      var picked = day === 12, today = day === 10;
+      var bg = picked ? '#ECEEF2' : (today ? '#24305A' : 'transparent');
+      cells.push({
+        day: String(day), label: 'October ' + day,
+        dots: (ev[day] || []).map(function (k) { return 'width: 6px; height: 6px; border-radius: 3px; background: ' + (picked ? '#0F1115' : COL[k]); }),
+        style: 'height: 46px; border-radius: 14px; font-size: 15px; font-weight: ' + (picked || today ? 800 : 600) + '; background: ' + bg + '; color: ' + (picked ? '#0F1115' : '#ECEEF2') + '; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px'
+      });
+    }
+    return { cells: cells };
+  }
+}
+</script>
+</body>
+</html>

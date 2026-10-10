@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Android adaptive icon foreground: transparent, artwork scaled into the central 66% safe zone. Background colour: #2F5BEA -->
+  <g transform="translate(512 512) scale(0.72) translate(-512 -492)">
+    <rect x="272" y="300" width="480" height="440" rx="72" fill="#FFFFFF"/>
+    <path d="M272 372a72 72 0 0 1 72-72h336a72 72 0 0 1 72 72v52H272z" fill="#C2410C"/>
+    <rect x="372" y="244" width="40" height="112" rx="20" fill="#15171C"/>
+    <rect x="612" y="244" width="40" height="112" rx="20" fill="#15171C"/>
+    <path d="M512 486c-50 0-86 38-86 88v46l-30 44h232l-30-44v-46c0-50-36-88-86-88z" fill="none" stroke="#15171C" stroke-width="30" stroke-linejoin="round"/>
+    <path d="M482 690a32 32 0 0 0 60 0" fill="none" stroke="#15171C" stroke-width="30" stroke-linecap="round"/>
+  </g>
+</svg>

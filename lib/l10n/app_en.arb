@@ -1,0 +1,226 @@
+{
+  "@@locale": "en",
+  "appName": "Reminders",
+  "home": "Home",
+  "calendar": "Calendar",
+  "all": "All",
+  "settings": "Settings",
+  "comingUp": "Coming up",
+  "nextUp": "Next up",
+  "sendWish": "Send a wish",
+  "snooze": "Snooze",
+  "birthdays": "Birthdays",
+  "monthly": "Monthly",
+  "weekly": "Weekly",
+  "yearly": "Yearly",
+  "daily": "Daily",
+  "once": "Once",
+  "thisWeek": "This week",
+  "laterMonth": "Later this month",
+  "later": "Later",
+  "search": "Search reminders",
+  "newReminder": "New reminder",
+  "editReminder": "Edit reminder",
+  "title": "Title",
+  "type": "Type",
+  "birthday": "Birthday",
+  "anniversary": "Anniversary",
+  "bill": "Bill",
+  "other": "Other",
+  "repeats": "Repeats",
+  "date": "Date",
+  "starts": "Starts",
+  "dayMonth": "Day of month",
+  "time": "Time",
+  "birthYear": "Birth year",
+  "originalYear": "Original year",
+  "optionalYear": "Optional · shows live age",
+  "remindMe": "Remind me",
+  "day0": "On the day",
+  "day1": "1 day before",
+  "week1": "1 week before",
+  "month1": "1 month before",
+  "note": "Note",
+  "noteHint": "Gift idea, phone number…",
+  "saveReminder": "Save reminder",
+  "save": "Save",
+  "cancel": "Cancel",
+  "done": "Done",
+  "delete": "Delete",
+  "deleteTitle": "Delete reminder?",
+  "deleteBody": "This removes the reminder and its history.",
+  "deleted": "Reminder deleted",
+  "undo": "Undo",
+  "emptyTitle": "Nothing to remember yet",
+  "emptyBody": "Keep the people and moments that matter close.",
+  "firstReminder": "Add your first reminder",
+  "noResults": "No reminders match your search",
+  "noDay": "No reminders on this day",
+  "today": "Today",
+  "tomorrow": "Tomorrow",
+  "pastOccurrences": "Past occurrences",
+  "noHistory": "Your history will appear here",
+  "missed": "Missed",
+  "snoozed": "Snoozed",
+  "ageNow": "Age right now",
+  "live": "Live",
+  "years": "Years",
+  "months": "Months",
+  "days": "Days",
+  "hours": "Hours",
+  "minutes": "Minutes",
+  "seconds": "Seconds",
+  "totalDays": "Total days lived",
+  "secondsLived": "Seconds lived",
+  "countdown": "Until the next occurrence",
+  "oneHour": "In 1 hour",
+  "tomorrowTime": "Tomorrow at the alert time",
+  "language": "Language",
+  "english": "English",
+  "arabic": "العربية",
+  "numbers": "Number style",
+  "appearance": "Appearance",
+  "theme": "Theme",
+  "system": "System",
+  "light": "Light",
+  "dark": "Dark",
+  "weekStart": "First day of week",
+  "defaults": "Defaults",
+  "defaultTime": "Default alert time",
+  "defaultLeads": "Default lead alerts",
+  "permissions": "Permissions",
+  "notifications": "Notifications",
+  "exactAlarms": "Exact alarms",
+  "battery": "Battery optimization",
+  "allowed": "Allowed",
+  "disabled": "Disabled",
+  "restricted": "Restricted",
+  "fix": "Fix",
+  "backup": "Backup & restore",
+  "export": "Export backup",
+  "import": "Import backup",
+  "merge": "Merge",
+  "replace": "Replace all",
+  "importTitle": "Restore backup",
+  "importBody": "Merge with existing reminders or replace all local data?",
+  "imported": "Backup restored",
+  "exported": "Backup exported",
+  "error": "Something went wrong. Please try again.",
+  "invalidTitle": "Enter a title with 1–80 characters",
+  "invalidDays": "Choose at least one weekday",
+  "invalidLeads": "Choose at least one alert",
+  "invalidYear": "Enter a valid year, not in the future",
+  "invalidNote": "Keep the note within 500 characters",
+  "permissionBanner": "Enable notifications and exact alarms for reliable reminders.",
+  "onboardTitle": "Never miss a meaningful moment",
+  "onboardBody": "Allow notifications and exact alarms so Reminders can alert you at the time you choose, even when your phone is asleep.",
+  "enable": "Enable reminders",
+  "notNow": "Not now",
+  "about": "Offline. Private. Made for your moments.",
+  "paused": "Paused",
+  "active": "Active",
+  "noUpcoming": "No upcoming occurrence",
+  "everyDay": "Every day at the chosen time",
+  "onceSummary": "A one-time reminder",
+  "monthClamp": "Last day in shorter months",
+  "weekdays": "Weekdays",
+  "turns": "Turns {number}",
+  "@turns": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "nowAge": "Now {number}",
+  "@nowAge": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "anniversaryCount": "{number} years together",
+  "@anniversaryCount": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "yearSummary": "Every year on {date}",
+  "@yearSummary": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "monthSummary": "On day {number} of every month",
+  "@monthSummary": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "weekSummary": "Every {days}",
+  "@weekSummary": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "wishBirthday": "Happy birthday, {title}!",
+  "@wishBirthday": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "wishAnniversary": "Happy anniversary, {title}!",
+  "@wishAnniversary": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "wishOther": "Thinking of you: {title}",
+  "@wishOther": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "relativeDays": "{number} d",
+  "@relativeDays": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "nextLabel": "Next up · {date}",
+  "@nextLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "daysLeft": "{count, plural, =0{Today} =1{1 day left} other{{number} days left}}",
+  "@daysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "number": {
+        "type": "String"
+      }
+    }
+  }
+}

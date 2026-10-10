@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>New reminder</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2F5BEA}a:hover{color:#1E3FB0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F4F6; font-family: 'Plus Jakarta Sans', sans-serif; color: #15171C; display: flex; flex-direction: column; overflow: hidden">
+
+  <div style="padding: 20px 12px 8px; display: flex; align-items: center; gap: 4px">
+    <a href="Main.dc.html" aria-label="Close" style="width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg></a>
+    <h1 style="margin: 0; font-size: 20px; font-weight: 800; flex: 1">New reminder</h1>
+  </div>
+
+  <div style="flex: 1; padding: 0 20px 0; display: flex; flex-direction: column; gap: 12px">
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="title" style="font-size: 13px; font-weight: 700; color: #5B6070">Title</label>
+      <input id="title" value="Mom's birthday" style="height: 52px; border-radius: 14px; border: 1.5px solid #15171C; background: #FFFFFF; padding: 0 16px; font-family: inherit; font-size: 16px; font-weight: 600; color: #15171C; box-sizing: border-box">
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 13px; font-weight: 700; color: #5B6070">Type</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: none; background: #F8EBE3; color: #9A3409; font-family: inherit; font-weight: 700; font-size: 13px">Birthday</button>
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #D5D8DF; background: #FFFFFF; color: #15171C; font-family: inherit; font-weight: 600; font-size: 13px">Anniversary</button>
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #D5D8DF; background: #FFFFFF; color: #15171C; font-family: inherit; font-weight: 600; font-size: 13px">Bill</button>
+        <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #D5D8DF; background: #FFFFFF; color: #15171C; font-family: inherit; font-weight: 600; font-size: 13px">Other</button>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 13px; font-weight: 700; color: #5B6070">Repeats</div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); background: #E4E6EB; border-radius: 14px; padding: 4px; gap: 2px">
+        <sc-for list="{{freqs}}" as="f" hint-placeholder-count="5">
+          <button onClick="{{f.pick}}" aria-pressed="{{f.on}}" style="{{f.style}}">{{f.label}}</button>
+        </sc-for>
+      </div>
+      <div style="font-size: 13px; color: #5B6070">{{freqHint}}</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-radius: 18px; display: flex; flex-direction: column">
+      <button style="height: 56px; border: none; background: transparent; padding: 0 16px; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #15171C; text-align: left; cursor: pointer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+        <span style="flex: 1; font-size: 15px; font-weight: 600">{{dateLabel}}</span>
+        <span style="font-size: 15px; font-weight: 700">{{dateValue}}</span>
+      </button>
+      <div style="height: 1px; background: #E4E6EB; margin: 0 16px"></div>
+      <button style="height: 56px; border: none; background: transparent; padding: 0 16px; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #15171C; text-align: left; cursor: pointer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        <span style="flex: 1; font-size: 15px; font-weight: 600">Time</span>
+        <span style="font-size: 15px; font-weight: 700">9:00 AM</span>
+      </button>
+      <div style="height: 1px; background: #E4E6EB; margin: 0 16px"></div>
+      <button style="height: 56px; border: none; background: transparent; padding: 0 16px; display: flex; align-items: center; gap: 12px; font-family: inherit; color: #15171C; text-align: left; cursor: pointer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path><path d="M4 16s1.5-1 4-1 4 2 6 2 4-1 4-1"></path><path d="M2 21h20"></path><path d="M12 8V5"></path></svg>
+        <span style="flex: 1; display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 600">Birth year</span><span style="font-size: 12px; color: #5B6070">Optional · shows live age</span></span>
+        <span style="font-size: 15px; font-weight: 700">1968</span>
+      </button>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 13px; font-weight: 700; color: #5B6070">Remind me</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <sc-for list="{{leads}}" as="l" hint-placeholder-count="4">
+          <button onClick="{{l.toggle}}" aria-pressed="{{l.on}}" style="{{l.style}}">{{l.label}}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <label for="note" style="font-size: 13px; font-weight: 700; color: #5B6070">Note</label>
+      <input id="note" placeholder="Gift idea, phone number…" style="height: 52px; border-radius: 14px; border: 1px solid #D5D8DF; background: #FFFFFF; padding: 0 16px; font-family: inherit; font-size: 15px; color: #15171C; box-sizing: border-box">
+    </div>
+  </div>
+
+  <div style="padding: 12px 20px 20px">
+    <a href="Main.dc.html" style="height: 56px; border-radius: 18px; background: {{accent}}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; text-decoration: none">Save reminder</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2F5BEA","options":["#2F5BEA","#0F766E","#C2410C","#15171C"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { freq: 'Yearly', leads: { 'On the day': true, '1 day before': true } }; }
+  renderVals() {
+    var self = this, freq = this.state.freq, leads = this.state.leads;
+    var freqs = ['Once', 'Daily', 'Weekly', 'Monthly', 'Yearly'].map(function (f) {
+      var on = f === freq;
+      return {
+        label: f, on: on ? 'true' : 'false',
+        pick: function () { self.setState({ freq: f }); },
+        style: 'height: 40px; border: none; border-radius: 10px; font-family: inherit; font-size: 12px; cursor: pointer; font-weight: ' + (on ? 800 : 600) + '; background: ' + (on ? '#FFFFFF' : 'transparent') + '; color: ' + (on ? '#15171C' : '#4A4F5C') + (on ? '; box-shadow: 0 1px 3px rgba(21,23,28,0.15)' : '')
+      };
+    });
+    var hints = {
+      Once: 'A one-time reminder.',
+      Daily: 'Every day at the chosen time.',
+      Weekly: 'Every Saturday.',
+      Monthly: 'On the 24th of every month.',
+      Yearly: 'Every year on 24 October.'
+    };
+    var dateLabel = { Once: 'Date', Daily: 'Starts', Weekly: 'Day', Monthly: 'Day of month', Yearly: 'Date' }[freq];
+    var dateValue = { Once: '24 Oct 2026', Daily: 'Today', Weekly: 'Saturday', Monthly: '24th', Yearly: '24 Oct' }[freq];
+    var leadList = ['On the day', '1 day before', '1 week before', '1 month before'].map(function (l) {
+      var on = !!leads[l];
+      return {
+        label: l, on: on ? 'true' : 'false',
+        toggle: function () { var n = Object.assign({}, self.state.leads); n[l] = !n[l]; self.setState({ leads: n }); },
+        style: 'height: 36px; padding: 0 14px; border-radius: 18px; font-family: inherit; font-size: 13px; cursor: pointer; font-weight: ' + (on ? 700 : 600) + '; border: ' + (on ? 'none' : '1px solid #D5D8DF') + '; background: ' + (on ? '#15171C' : '#FFFFFF') + '; color: ' + (on ? '#FFFFFF' : '#15171C')
+      };
+    });
+    return {
+      accent: this.props.accent ?? '#2F5BEA',
+      freqs: freqs, freqHint: hints[freq], dateLabel: dateLabel, dateValue: dateValue, leads: leadList
+    };
+  }
+}
+</script>
+</body>
+</html>

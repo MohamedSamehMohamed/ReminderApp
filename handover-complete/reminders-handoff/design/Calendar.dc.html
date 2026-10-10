@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Calendar</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2F5BEA}a:hover{color:#1E3FB0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F4F6; font-family: 'Plus Jakarta Sans', sans-serif; color: #15171C; display: flex; flex-direction: column; overflow: hidden">
+
+  <div style="padding: 28px 20px 12px; display: flex; justify-content: space-between; align-items: center">
+    <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em">October 2026</h1>
+    <div style="display: flex; gap: 8px">
+      <button aria-label="Previous month" style="width: 44px; height: 44px; border-radius: 22px; border: none; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"></path></svg></button>
+      <button aria-label="Next month" style="width: 44px; height: 44px; border-radius: 22px; border: none; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg></button>
+    </div>
+  </div>
+
+  <div style="margin: 4px 20px 0; background: #FFFFFF; border-radius: 24px; padding: 16px 12px">
+    <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); text-align: center; font-size: 12px; font-weight: 700; color: #5B6070; padding-bottom: 8px">
+      <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); row-gap: 4px">
+      <sc-for list="{{cells}}" as="c" hint-placeholder-count="35">
+        <button onClick="{{c.pick}}" aria-label="{{c.label}}" style="{{c.style}}">
+          <span>{{c.day}}</span>
+          <span style="display: flex; gap: 3px; height: 6px">
+            <sc-for list="{{c.dots}}" as="d" hint-placeholder-count="1"><span style="{{d}}"></span></sc-for>
+          </span>
+        </button>
+      </sc-for>
+    </div>
+    <div style="display: flex; gap: 14px; justify-content: center; padding-top: 12px; font-size: 12px; color: #5B6070; font-weight: 600">
+      <span style="display: flex; gap: 6px; align-items: center"><span style="width: 8px; height: 8px; border-radius: 4px; background: #C2410C"></span>Yearly</span>
+      <span style="display: flex; gap: 6px; align-items: center"><span style="width: 8px; height: 8px; border-radius: 4px; background: #0F766E"></span>Monthly</span>
+      <span style="display: flex; gap: 6px; align-items: center"><span style="width: 8px; height: 8px; border-radius: 4px; background: #2F5BEA"></span>Weekly</span>
+      <span style="display: flex; gap: 6px; align-items: center"><span style="width: 8px; height: 8px; border-radius: 4px; background: #7A7F8E"></span>Daily</span>
+    </div>
+  </div>
+
+  <div style="flex: 1; padding: 18px 20px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="font-size: 13px; font-weight: 700; color: #5B6070">{{selectedLabel}}</div>
+    <sc-if value="{{hasItems}}" hint-placeholder-val="{{ true }}">
+      <sc-for list="{{items}}" as="it" hint-placeholder-count="1">
+        <a href="Detail.dc.html" style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; gap: 12px; align-items: center; text-decoration: none; color: #15171C">
+          <span style="{{it.chip}}"></span>
+          <span style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+            <span style="font-size: 15px; font-weight: 700">{{it.title}}</span>
+            <span style="font-size: 13px; color: #5B6070">{{it.sub}}</span>
+          </span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"></path></svg>
+        </a>
+      </sc-for>
+    </sc-if>
+    <sc-if value="{{noItems}}" hint-placeholder-val="{{ false }}">
+      <div style="background: #FFFFFF; border-radius: 18px; padding: 20px; text-align: center; color: #5B6070; font-size: 14px">Nothing on this day. Tap + to add a reminder.</div>
+    </sc-if>
+  </div>
+
+  <nav style="height: 76px; background: #FFFFFF; border-top: 1px solid #E4E6EB; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center">
+    <a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #5B6070; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg></span>Home</a>
+    <a href="Calendar.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #15171C; font-size: 12px; font-weight: 700">
+      <span style="width: 56px; height: 30px; border-radius: 15px; background: #ECEFFC; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span>Calendar</a>
+    <a href="AddReminder.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #5B6070; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></span>All</a>
+    <a href="Settings.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #5B6070; font-size: 12px; font-weight: 600">
+      <span style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg></span>Settings</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { picked: 12 }; }
+  renderVals() {
+    var COL = { y: '#C2410C', m: '#0F766E', w: '#2F5BEA', d: '#7A7F8E' };
+    var events = {
+      12: [{ k: 'y', title: "Omar's birthday", sub: 'Yearly · turns 30 · all day' }],
+      15: [{ k: 'm', title: 'Pay internet bill', sub: 'Monthly · 9:00 AM' }],
+      24: [{ k: 'y', title: "Mom's birthday", sub: 'Yearly · all day' }],
+      28: [{ k: 'y', title: 'Wedding anniversary', sub: 'Yearly · 8:00 PM' }]
+    };
+    [2, 9, 16, 23, 30].forEach(function (d) {
+      events[d] = (events[d] || []).concat([{ k: 'w', title: 'Call grandma', sub: 'Weekly · Fridays · 7:00 PM' }]);
+    });
+    for (var dd = 1; dd <= 31; dd++) {
+      events[dd] = (events[dd] || []).concat([{ k: 'd', title: 'Take vitamins', sub: 'Daily · 8:00 AM' }]);
+    }
+    var self = this;
+    var picked = this.state.picked;
+    var cells = [];
+    for (var i = 0; i < 35; i++) {
+      var day = i - 3;
+      if (day < 1 || day > 31) {
+        cells.push({ day: '', label: 'Empty', dots: [], pick: function () {}, style: 'height: 46px; border: none; background: transparent' });
+        continue;
+      }
+      var evs = (events[day] || []).filter(function (e) { return e.k !== 'd'; });
+      var isPicked = day === picked, isToday = day === 10;
+      var bg = isPicked ? '#15171C' : (isToday ? '#ECEFFC' : 'transparent');
+      var fg = isPicked ? '#FFFFFF' : '#15171C';
+      cells.push({
+        day: String(day),
+        label: 'October ' + day,
+        dots: evs.map(function (e) { return 'width: 6px; height: 6px; border-radius: 3px; background: ' + (isPicked ? '#FFFFFF' : COL[e.k]); }),
+        pick: (function (d) { return function () { self.setState({ picked: d }); }; })(day),
+        style: 'height: 46px; border: none; border-radius: 14px; cursor: pointer; font-family: inherit; font-size: 15px; font-weight: ' + (isToday || isPicked ? 800 : 600) + '; background: ' + bg + '; color: ' + fg + '; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px'
+      });
+    }
+    var dow = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][(picked + 3) % 7];
+    var items = (events[picked] || []).map(function (e) {
+      return { title: e.title, sub: e.sub, chip: 'width: 10px; height: 40px; border-radius: 5px; background: ' + COL[e.k] };
+    });
+    return {
+      cells: cells,
+      items: items,
+      hasItems: items.length > 0,
+      noItems: items.length === 0,
+      selectedLabel: dow + ', ' + picked + ' October' + (picked === 10 ? ' · Today' : '')
+    };
+  }
+}
+</script>
+</body>
+</html>

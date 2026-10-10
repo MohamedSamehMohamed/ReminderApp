@@ -1,0 +1,17 @@
+.tools/
+.dart_tool/
+.flutter-plugins-dependencies
+build/
+android/.gradle/
+android/local.properties
+android/key.properties
+*.jks
+*.keystore
+*.zip
+handover-update/
+/reminders-handoff/
+BUILD_HANDOVER_SPEC.txt
+.idea/
+*.iml
+coverage/
+artifacts/

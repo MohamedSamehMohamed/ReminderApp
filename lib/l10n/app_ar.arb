@@ -1,0 +1,226 @@
+{
+  "@@locale": "ar",
+  "appName": "تذكيرات",
+  "home": "الرئيسية",
+  "calendar": "التقويم",
+  "all": "الكل",
+  "settings": "الإعدادات",
+  "comingUp": "القادم",
+  "nextUp": "التالي",
+  "sendWish": "أرسل تهنئة",
+  "snooze": "غفوة",
+  "birthdays": "أعياد الميلاد",
+  "monthly": "شهري",
+  "weekly": "أسبوعي",
+  "yearly": "سنوي",
+  "daily": "يومي",
+  "once": "مرة واحدة",
+  "thisWeek": "هذا الأسبوع",
+  "laterMonth": "لاحقًا هذا الشهر",
+  "later": "لاحقًا",
+  "search": "ابحث في التذكيرات",
+  "newReminder": "تذكير جديد",
+  "editReminder": "تعديل التذكير",
+  "title": "العنوان",
+  "type": "النوع",
+  "birthday": "عيد ميلاد",
+  "anniversary": "ذكرى سنوية",
+  "bill": "فاتورة",
+  "other": "أخرى",
+  "repeats": "التكرار",
+  "date": "التاريخ",
+  "starts": "يبدأ",
+  "dayMonth": "يوم الشهر",
+  "time": "الوقت",
+  "birthYear": "سنة الميلاد",
+  "originalYear": "السنة الأصلية",
+  "optionalYear": "اختياري · يعرض العمر الحالي",
+  "remindMe": "ذكّرني",
+  "day0": "في نفس اليوم",
+  "day1": "قبل يوم",
+  "week1": "قبل أسبوع",
+  "month1": "قبل شهر",
+  "note": "ملاحظة",
+  "noteHint": "فكرة هدية، رقم هاتف…",
+  "saveReminder": "حفظ التذكير",
+  "save": "حفظ",
+  "cancel": "إلغاء",
+  "done": "تم",
+  "delete": "حذف",
+  "deleteTitle": "حذف التذكير؟",
+  "deleteBody": "سيُحذف التذكير وسجله.",
+  "deleted": "تم حذف التذكير",
+  "undo": "تراجع",
+  "emptyTitle": "لا توجد تذكيرات بعد",
+  "emptyBody": "احتفظ بالأشخاص واللحظات المهمة بالقرب منك.",
+  "firstReminder": "أضف تذكيرك الأول",
+  "noResults": "لا توجد تذكيرات مطابقة",
+  "noDay": "لا توجد تذكيرات في هذا اليوم",
+  "today": "اليوم",
+  "tomorrow": "غدًا",
+  "pastOccurrences": "التذكيرات السابقة",
+  "noHistory": "سيظهر سجلك هنا",
+  "missed": "فات",
+  "snoozed": "مؤجل",
+  "ageNow": "العمر الآن",
+  "live": "مباشر",
+  "years": "سنوات",
+  "months": "أشهر",
+  "days": "أيام",
+  "hours": "ساعات",
+  "minutes": "دقائق",
+  "seconds": "ثوانٍ",
+  "totalDays": "مجموع أيام العمر",
+  "secondsLived": "ثواني العمر",
+  "countdown": "حتى الموعد القادم",
+  "oneHour": "بعد ساعة",
+  "tomorrowTime": "غدًا في وقت التنبيه",
+  "language": "اللغة",
+  "english": "English",
+  "arabic": "العربية",
+  "numbers": "شكل الأرقام",
+  "appearance": "المظهر",
+  "theme": "السمة",
+  "system": "النظام",
+  "light": "فاتح",
+  "dark": "داكن",
+  "weekStart": "بداية الأسبوع",
+  "defaults": "القيم الافتراضية",
+  "defaultTime": "وقت التنبيه الافتراضي",
+  "defaultLeads": "التنبيهات المسبقة الافتراضية",
+  "permissions": "الأذونات",
+  "notifications": "الإشعارات",
+  "exactAlarms": "المنبهات الدقيقة",
+  "battery": "تحسين البطارية",
+  "allowed": "مسموح",
+  "disabled": "معطل",
+  "restricted": "مقيد",
+  "fix": "إصلاح",
+  "backup": "النسخ الاحتياطي والاستعادة",
+  "export": "تصدير نسخة احتياطية",
+  "import": "استيراد نسخة احتياطية",
+  "merge": "دمج",
+  "replace": "استبدال الكل",
+  "importTitle": "استعادة النسخة",
+  "importBody": "دمج مع التذكيرات الحالية أم استبدال كل البيانات المحلية؟",
+  "imported": "تمت استعادة النسخة",
+  "exported": "تم تصدير النسخة",
+  "error": "حدث خطأ. حاول مرة أخرى.",
+  "invalidTitle": "أدخل عنوانًا من ١ إلى ٨٠ حرفًا",
+  "invalidDays": "اختر يومًا واحدًا على الأقل",
+  "invalidLeads": "اختر تنبيهًا واحدًا على الأقل",
+  "invalidYear": "أدخل سنة صحيحة ليست في المستقبل",
+  "invalidNote": "يجب ألا تتجاوز الملاحظة ٥٠٠ حرف",
+  "permissionBanner": "فعّل الإشعارات والمنبهات الدقيقة لتذكيرات موثوقة.",
+  "onboardTitle": "لا تفوّت لحظة مهمة",
+  "onboardBody": "اسمح بالإشعارات والمنبهات الدقيقة ليصلك التنبيه في الوقت المختار حتى عندما يكون هاتفك خاملاً.",
+  "enable": "تفعيل التذكيرات",
+  "notNow": "ليس الآن",
+  "about": "دون إنترنت. بخصوصية. للحظاتك المهمة.",
+  "paused": "متوقف",
+  "active": "نشط",
+  "noUpcoming": "لا يوجد موعد قادم",
+  "everyDay": "كل يوم في الوقت المختار",
+  "onceSummary": "تذكير لمرة واحدة",
+  "monthClamp": "آخر يوم في الأشهر الأقصر",
+  "weekdays": "أيام الأسبوع",
+  "turns": "يتم {number}",
+  "@turns": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "nowAge": "العمر {number}",
+  "@nowAge": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "anniversaryCount": "{number} سنوات معًا",
+  "@anniversaryCount": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "yearSummary": "كل سنة في {date}",
+  "@yearSummary": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "monthSummary": "في اليوم {number} من كل شهر",
+  "@monthSummary": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "weekSummary": "كل {days}",
+  "@weekSummary": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "wishBirthday": "عيد ميلاد سعيد، {title}!",
+  "@wishBirthday": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "wishAnniversary": "ذكرى سنوية سعيدة، {title}!",
+  "@wishAnniversary": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "wishOther": "نفكر بك: {title}",
+  "@wishOther": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "relativeDays": "{number} ي",
+  "@relativeDays": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "nextLabel": "التالي · {date}",
+  "@nextLabel": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "daysLeft": "{count, plural, =0{اليوم} =1{متبقي يوم واحد} =2{متبقي يومان} few{متبقي {number} أيام} many{متبقي {number} يومًا} other{متبقي {number} يوم}}",
+  "@daysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "number": {
+        "type": "String"
+      }
+    }
+  }
+}

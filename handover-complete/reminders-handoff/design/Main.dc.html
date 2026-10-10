@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home — Upcoming</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2F5BEA}a:hover{color:#1E3FB0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #F3F4F6; font-family: 'Plus Jakarta Sans', sans-serif; color: #15171C; display: flex; flex-direction: column; position: relative; overflow: hidden">
+
+  <div style="padding: 28px 20px 12px; display: flex; justify-content: space-between; align-items: flex-start">
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <div style="font-size: 13px; font-weight: 600; color: #5B6070; letter-spacing: 0.04em; text-transform: uppercase">Saturday, 10 Oct</div>
+      <h1 style="margin: 0; font-size: 28px; font-weight: 800; letter-spacing: -0.02em">Coming up</h1>
+    </div>
+    <div style="display: flex; gap: 8px">
+      <button aria-label="Search" style="width: 44px; height: 44px; border-radius: 22px; border: none; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+      </button>
+      <button aria-label="Notifications" style="width: 44px; height: 44px; border-radius: 22px; border: none; background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+      </button>
+    </div>
+  </div>
+
+  <div style="padding: 8px 20px 0">
+    <div style="background: {{accent}}; color: #FFFFFF; border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.9">Next up · in 2 days</div>
+        <div style="font-size: 12px; font-weight: 600; background: rgba(255,255,255,0.18); padding: 4px 10px; border-radius: 999px">Yearly</div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: center">
+        <div style="width: 56px; height: 56px; border-radius: 16px; background: #FFFFFF; color: #15171C; display: flex; flex-direction: column; align-items: center; justify-content: center">
+          <div style="font-size: 11px; font-weight: 700; color: #C2410C">OCT</div>
+          <div style="font-size: 22px; font-weight: 800; line-height: 1">12</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2px">
+          <div style="font-size: 20px; font-weight: 800">Omar's birthday</div>
+          <div style="font-size: 14px; opacity: 0.9">Turns 30 · Monday</div>
+        </div>
+      </div>
+      <div style="display: flex; gap: 8px">
+        <button style="flex: 1; height: 44px; border-radius: 14px; border: none; background: #FFFFFF; color: #15171C; font-family: inherit; font-weight: 700; font-size: 14px; cursor: pointer">Send a wish</button>
+        <button style="flex: 1; height: 44px; border-radius: 14px; border: 1.5px solid rgba(255,255,255,0.6); background: transparent; color: #FFFFFF; font-family: inherit; font-weight: 700; font-size: 14px; cursor: pointer">Snooze</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 18px 20px 6px; display: flex; gap: 8px; overflow: hidden">
+    <button style="height: 36px; padding: 0 16px; border-radius: 18px; border: none; background: #15171C; color: #FFFFFF; font-family: inherit; font-weight: 600; font-size: 13px; white-space: nowrap">All</button>
+    <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #D5D8DF; background: #FFFFFF; color: #15171C; font-family: inherit; font-weight: 600; font-size: 13px; white-space: nowrap">Birthdays</button>
+    <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #D5D8DF; background: #FFFFFF; color: #15171C; font-family: inherit; font-weight: 600; font-size: 13px; white-space: nowrap">Monthly</button>
+    <button style="height: 36px; padding: 0 14px; border-radius: 18px; border: 1px solid #D5D8DF; background: #FFFFFF; color: #15171C; font-family: inherit; font-weight: 600; font-size: 13px; white-space: nowrap">Weekly</button>
+  </div>
+
+  <div style="flex: 1; padding: 10px 20px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="font-size: 13px; font-weight: 700; color: #5B6070">This week</div>
+
+    <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; gap: 12px; align-items: center">
+      <div style="width: 44px; height: 44px; border-radius: 14px; background: #E7EFEE; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 10h18"></path></svg>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 15px; font-weight: 700">Pay internet bill</div>
+        <div style="font-size: 13px; color: #5B6070">Monthly · 15th · 9:00 AM</div>
+      </div>
+      <div style="font-size: 13px; font-weight: 700; color: #0F766E">Thu</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; gap: 12px; align-items: center">
+      <div style="width: 44px; height: 44px; border-radius: 14px; background: #ECEFFC; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2F5BEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"></path><path d="M3 11v-1a4 4 0 0 1 4-4h14"></path><path d="M7 22l-4-4 4-4"></path><path d="M21 13v1a4 4 0 0 1-4 4H3"></path></svg>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 15px; font-weight: 700">Call grandma</div>
+        <div style="font-size: 13px; color: #5B6070">Weekly · Fridays · 7:00 PM</div>
+      </div>
+      <div style="font-size: 13px; font-weight: 700; color: #2F5BEA">Fri</div>
+    </div>
+
+    <div style="font-size: 13px; font-weight: 700; color: #5B6070; padding-top: 6px">Later this month</div>
+
+    <div style="background: #FFFFFF; border-radius: 18px; padding: 14px; display: flex; gap: 12px; align-items: center">
+      <div style="width: 44px; height: 44px; border-radius: 14px; background: #F8EBE3; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2410C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"></path><path d="M4 16s1.5-1 4-1 4 2 6 2 4-1 4-1"></path><path d="M2 21h20"></path><path d="M12 8V5"></path></svg>
+      </div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 2px">
+        <div style="font-size: 15px; font-weight: 700">Mom's birthday</div>
+        <div style="font-size: 13px; color: #5B6070">Yearly · 24 Oct</div>
+      </div>
+      <div style="font-size: 13px; font-weight: 700; color: #C2410C">14 d</div>
+    </div>
+  </div>
+
+  <button aria-label="Add reminder" style="position: absolute; right: 20px; bottom: 96px; width: 60px; height: 60px; border-radius: 20px; border: none; background: #15171C; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 8px 20px rgba(21,23,28,0.25)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+  </button>
+
+  <nav style="height: 76px; background: #FFFFFF; border-top: 1px solid #E4E6EB; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center">
+    <a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #15171C; font-size: 12px; font-weight: 700">
+      <div style="width: 56px; height: 30px; border-radius: 15px; background: #ECEFFC; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15171C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"></path></svg></div>Home</a>
+    <a href="Calendar.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #5B6070; font-size: 12px; font-weight: 600">
+      <div style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div>Calendar</a>
+    <a href="AddReminder.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #5B6070; font-size: 12px; font-weight: 600">
+      <div style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg></div>All</a>
+    <a href="Settings.dc.html" style="display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; color: #5B6070; font-size: 12px; font-weight: 600">
+      <div style="width: 56px; height: 30px; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B6070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>Settings</a>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2F5BEA","options":["#2F5BEA","#0F766E","#C2410C","#15171C"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2F5BEA' };
+  }
+}
+</script>
+</body>
+</html>
