@@ -2,4 +2,3 @@ arb-dir: lib/l10n
 output-localization-file: app_localizations.dart
 output-dir: lib/l10n
 nullable-getter: false
-
